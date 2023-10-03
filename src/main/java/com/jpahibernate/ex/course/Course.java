@@ -1,8 +1,17 @@
 package com.jpahibernate.ex.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity(name = "Course")
 public class Course {
+    @Id
     private Long id;
+    @Column(nullable = false, name = "name")
     private String name;
+    @Column(nullable = false, name = "author")
     private String author;
 
     public Course() {
