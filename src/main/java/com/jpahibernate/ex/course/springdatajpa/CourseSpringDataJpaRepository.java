@@ -9,4 +9,8 @@ public interface CourseSpringDataJpaRepository extends JpaRepository<Course, Lon
 
     List<Course>findByAuthor(String author);
     List<Course>findByName(String name);
+
+    List<Course>findAllByAuthorContainingIgnoreCase(String author);
+
+    List<Course>findCourseByNameContainingIgnoreCase(String name);
 }
